@@ -17,3 +17,17 @@
 ▪️ pom(Project Object Model) 기술된 파일을 보고 maven Tool이 동작하게 된다. <br> 
 <br> Pom이 하는것은? Library관리 == API 관리 <br><br>
 ▪️ MVC ➡️ Spring 변경된 점은? 1. POJO 2. DB설정
+
+## **2022-04-07**
+### Spring과 DB연결
+1. root-context.xml에 database연결
+- api파일 추가 
+  -  Spring DB API 
+  -  mybatis
+  -  mybatis spring
+  -  spring jdbc
+2. db.properties 연결 <br>
+한 클래스를 생성한다고 했을때, A a = new A(); 처럼 **직접적인 생성**도 가능하겠지만 <br> spring에서는 **root-context.xml**파일 내에 <bean>태그 안에 클래스를 설정해줄 수 도 있다. <br>
+  <bean id="소문자 시작" class="연결할 객체"> <br> 
+  <property name="locations" value="/WEB-INF/mybatis/db.properties"/>
+  <property>의 태그는 class의 setter메소드에 의해서 value에 들어가있는 값을 넘겨주면 class의 파일을 읽어서 리턴해준다.
