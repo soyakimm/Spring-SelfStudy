@@ -35,7 +35,8 @@
   ```
   
 ## **2022-04-08**
-자바에서 JDBC연결부분은 -> **DataSource**로 연결 -> bean생성 필요 <br>
+### Spring Web mvc에서 DataBase연결하기
+- 자바에서 JDBC연결부분은 -> **DataSource**로 연결 -> bean생성 필요 <br>
 ```
   org.springFramework.jdbc.datasource -> simpleDriverDataSource.class 소스 활용
   <bean id="dataSource" class="simpleDriverDataSource.class 소스">
@@ -48,4 +49,16 @@
 ```
 
 이외에도 스프링에서 jdbc방법이 여러가지가 있다. 하지만 표준 가이드라인은 상단의 내용이다. 먼저 공부하고, 깊은 내용을 추후에 공부하자! 😄
+
+- jdbc를 활용해서 mybatis에서 sqlsessionfactory를 만들어내는게 가장 중요했다. 
+```
+  mybatis와 연관된 api
+  <bean id="sqlSessionFactory" class="SqlSessionFactoryBean경로">
+    - database연결정보 작성 -
+    <property name="dataSource" ref="dataSource"/>
+    <property name="configlocation" value="/WEB-INF/mybatis/config.xml(경로)"/> --> config.xml에 해당하기에 `typeAlias만` 필요하고 나머지는 필요없음.
+    <property name="mapperlocation" value="classpath:kr/bit/mybatis/*.xml" /> -->
+   - ✔️ mapper파일 참조시, mapper파일을 찾아가려면 ':' 콜론이 있어야한다.
+  </bean>
+```
 
