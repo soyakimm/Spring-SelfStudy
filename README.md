@@ -24,7 +24,7 @@
 - api파일 추가 
   -  Spring DB API 
   -  mybatis
-  -  mybatis spring
+  -  mybatis spring 
   -  spring jdbc
 2. db.properties 연결 <br>
 한 클래스를 생성한다고 했을때, A a = new A(); 처럼 **직접적인 생성**도 가능하겠지만 <br> spring에서는 **root-context.xml**파일 내에 ```<bean>태그``` 안에 클래스를 설정해줄 수 도 있다. <br>
@@ -35,4 +35,17 @@
   ```
   
 ## **2022-04-08**
-  
+자바에서 JDBC연결부분은 -> **DataSource**로 연결 -> bean생성 필요 <br>
+```
+  org.springFramework.jdbc.datasource -> simpleDriverDataSource.class 소스 활용
+  <bean id="dataSource" class="simpleDriverDataSource.class 소스">
+    <property name="driverClass" value="${driver}"/>
+  🌟여기서 driver은 db.properties 즉, properties파일에 있는 driver을 의미한다.🌟
+    <property name="url" value="${url}"/>
+    <property name="username" value="${username}"/>
+    <property name="pasword" value="${password}"/>
+  <bean>
+```
+
+이외에도 스프링에서 jdbc방법이 여러가지가 있다. 하지만 표준 가이드라인은 상단의 내용이다. 먼저 공부하고, 깊은 내용을 추후에 공부하자! 😄
+
