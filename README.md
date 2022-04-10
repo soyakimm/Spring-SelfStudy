@@ -74,3 +74,12 @@ annotation이 붙여져있으면 spring에서 발견해서 '객체'를 만들어
 
 ## **2022-04-10**
 ### Spring web mvc 동작원리(2) 
+DI(dependecy Injection)을 하는 방법
+1. `@Autowired`
+- 스프링컨테이너에 가서 MemberDAO 객체를 찾는다. 
+- 찾은 객체를 해당 변수에 가져와서 쓸 수 있게 한다. 
+- ⭐ 여기서 @ 어노테이션은 위에 말했던 '전처리' 즉, 행동에 옮겨진다는 의미다 ⭐
+2. `@Inject`
+
+객체 바인딩을 하기 위해서 스프링이 제공해주는 클래스가 있다 -> `'Model'`  <br>
+`HttpServletRequest == Model`
