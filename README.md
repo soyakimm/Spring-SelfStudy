@@ -85,4 +85,6 @@ DI(dependecy Injection)을 하는 방법
 `HttpServletRequest == Model`
 
 ## **2022-04-12**
-###
+### Spring WEB MVC를 이용한 회원관리
+
+`@RequestParam` : 클라이언트에서 넘어온 변수 이름을 다르게 설정
