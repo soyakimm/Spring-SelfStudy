@@ -87,4 +87,10 @@ DI(dependecy Injection)을 하는 방법
 ## **2022-04-12**
 ### Spring WEB MVC를 이용한 회원관리
 
+😙 파일뜯어보기
+`root-context.xml` : 데이터베이스 연결하는 파일
+`servlet-context.xml` : frontController 참조 파일
+- `<context:component-scan base-package=...>` : controller을 메모리에 자동으로 올릴 수 있도록 도와줌
+  - 어떻게 도와줄까? @어노테이션이 붙여있는 클래스를 Spring Container에서 관리를 해준다. <- 이를 MVC에서는 POJO라고 말했다.
+
 `@RequestParam` : 클라이언트에서 넘어온 변수 이름을 다르게 설정
