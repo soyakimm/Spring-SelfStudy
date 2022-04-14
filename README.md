@@ -92,5 +92,8 @@ DI(dependecy Injection)을 하는 방법
 `servlet-context.xml` : frontController 참조 파일
 - `<context:component-scan base-package=...>` : controller을 메모리에 자동으로 올릴 수 있도록 도와줌
   - 어떻게 도와줄까? @어노테이션이 붙여있는 클래스를 Spring Container에서 관리를 해준다. <- 이를 MVC에서는 POJO라고 말했다.
+-----------------------------
+- `@RequestMapping` : HandlerMapping에 의해서 관리되는 매핑 | 클라이언트에게 요청이 오면 핸들러매핑이 @RequestMapping이라는 요청을 보고 각각의 메소드와 매핑을 시켜서 처리를 해준다.
+### 이렇게 Spring에서 가장 큰 차이점은 POJO의 개수의 차이다. 하나에 적은 코드로 구현 가능하기 때문이다. 
 
 `@RequestParam` : 클라이언트에서 넘어온 변수 이름을 다르게 설정
