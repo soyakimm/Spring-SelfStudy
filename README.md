@@ -97,3 +97,12 @@ DI(dependecy Injection)을 하는 방법
 ### 이렇게 Spring에서 가장 큰 차이점은 POJO의 개수의 차이다. 하나에 적은 코드로 구현 가능하기 때문이다. 
 
 `@RequestParam` : 클라이언트에서 넘어온 변수 이름을 다르게 설정
+
+## **2022-04-15**
+### Spring WEB MVC 프로젝트 만들기
+
+메소드의 이름과 SQL의 ID를 최대한 일치시켜준다.
+1. interface에 메소드를 정의
+2. interface의 메소드하고 Sql Mapper의 id들의 이름과 연결시켜서 sql을 실행하게 만든다 ---> DAO가 필요없다. <br>
+---- 이때 interface가 MapperInterface라고 부르는데, 이 인터페이스와 xml의 id와 자동으로 연결해서 DB프로그래밍을 한다 --- ✴️ 여기서 포인트 ! DAO를 없어지게함. <br>
+### 근데 XML Mapper도 쓰지 않고, 메소드 위에다가 어노테이션을 이용해서 여기에 SQL을 쓰는 방법이 있다.
