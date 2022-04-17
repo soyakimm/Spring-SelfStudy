@@ -111,4 +111,14 @@ DI(dependecy Injection)을 하는 방법
 ### Mapper 인터페이스와 XML mapper 파일 이용 CRUD하기
 1. interface에 DAO에서 정의해놓은 메소드를 interface로 가져와 '정의'만 해놓는다.<br>
 🌟 메소드의 이름이 sql의 id와 동일하게 설정되어있어, dao가 없어도 spring framework 내부에서 인터페이스만 가지고도 sql을 실행할 수 있도록 돕는다 ⭐ <br>
-2. ✅ interface로 만든 **인터페이스명과** Mapper.xml파일의 `namespace가` 동일해야, spring framework에서 인터페이스만을 가지고도 sql을 실행할 수 있도록 하는 것이므로, 🕶️ 매우매우 주의해야한다!!!!
+2. ✅ interface로 만든 **인터페이스명과** Mapper.xml파일의 `namespace`가 동일해야, spring framework에서 인터페이스만을 가지고도 sql을 실행할 수 있도록 하는 것이므로, 🕶️ 매우매우 주의해야한다!!!! -> 프레임워크가 알아서 매핑해준다 <br> 
+<img width="551" alt="image" src="https://user-images.githubusercontent.com/100359222/163715259-5fd695ae-6422-47ac-9b25-702117778f22.png">
+
+### 단! 이렇게 자동으로 매핑하기 위해서 조건을 걸어주어야 한다 ###
+1. @Mapper 어노테이션 : Mybatis(SqlSessionFactory + SqlSession) 동격
+2. root-context에 mybatis-spring:scan 이 있어야 한다. <br>
+   -> mapper을 메모리에 올려서 작업할 수 있게 하는 것
+<img width="557" alt="image" src="https://user-images.githubusercontent.com/100359222/163715493-44af698e-2e4e-4f54-8711-ce72b66ebd47.png">
+---------
+3. 컨트롤러에서는 DAO가 아닌 Interface에 정의한 메소드를 가져온다
+4. 3번에 정의한 interface메소드는 @Autowired로 의존성주입을 한 후, 빈등록을 한다.
