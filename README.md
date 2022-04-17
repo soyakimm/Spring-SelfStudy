@@ -119,6 +119,6 @@ DI(dependecy Injection)을 하는 방법
 2. root-context에 mybatis-spring:scan 이 있어야 한다. <br>
    -> mapper을 메모리에 올려서 작업할 수 있게 하는 것
 <img width="557" alt="image" src="https://user-images.githubusercontent.com/100359222/163715493-44af698e-2e4e-4f54-8711-ce72b66ebd47.png">
----------
+<br>
 3. 컨트롤러에서는 DAO가 아닌 Interface에 정의한 메소드를 가져온다
 4. 3번에 정의한 interface메소드는 @Autowired로 의존성주입을 한 후, 빈등록을 한다.
