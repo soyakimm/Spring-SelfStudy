@@ -122,3 +122,6 @@ DI(dependecy Injection)을 하는 방법
 <br>
 3. 컨트롤러에서는 DAO가 아닌 Interface에 정의한 메소드를 가져온다
 4. 3번에 정의한 interface메소드는 @Autowired로 의존성주입을 한 후, 빈등록을 한다.
+
+## **2022-04-18** ##
+### Mapper인터페이스와 @(Annotation)이용 CRUD
