@@ -125,3 +125,4 @@ DI(dependecy Injection)을 하는 방법
 
 ## **2022-04-18** ##
 ### Mapper인터페이스와 @(Annotation)이용 CRUD
+XML파일이 터무니없이 길어질 경우, Annotation을 사용한 crud가 더욱 효과적이다. <br>
