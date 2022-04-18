@@ -126,3 +126,23 @@ DI(dependecy Injection)을 하는 방법
 ## **2022-04-18** ##
 ### Mapper인터페이스와 @(Annotation)이용 CRUD
 XML파일이 터무니없이 길어질 경우, Annotation을 사용한 crud가 더욱 효과적이다. <br>
+
+## 2022-04-19 ##
+### Spring WEB MVC와 Ajax 통신하기 (@ResponseBody)
+Javascript를 통해서 데이터를 불러와 화면단에 뿌려줄 수 있다. <br>
+이때, <script>태그를 이용해, $ajax를 통하여 서버와 연결한다. <br>
+1. url : 요청하는 경로
+2. type : 요청방식 (get, post)
+3. dataType : 서버로부터 내려온 데이터 타입(json 등)
+4. success : callback함수 (예: resultHtml)
+5. error : error가 나면 실행할 것
+------------------------------------
+ ** success, 즉 받아올 펑션**
+ 1. function result(data) { <br>
+  console.log(data); <br>
+  alert(data); 등등 
+}
+  
+### $.ajax() -> callback 함수로 응답 -> JSON로 Controller에서 응답필요 ###
+<img width="434" alt="image" src="https://user-images.githubusercontent.com/100359222/163884105-55897779-2fa8-4f79-95aa-5665191d66c1.png">
+
