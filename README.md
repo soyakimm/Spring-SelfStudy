@@ -145,4 +145,3 @@ Javascript를 통해서 데이터를 불러와 화면단에 뿌려줄 수 있다
   
 ### $.ajax() -> callback 함수로 응답 -> JSON로 Controller에서 응답필요 ###
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/100359222/163884105-55897779-2fa8-4f79-95aa-5665191d66c1.png">
-
