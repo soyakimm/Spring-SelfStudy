@@ -151,10 +151,19 @@ Javascript를 통해서 데이터를 불러와 화면단에 뿌려줄 수 있다
 🧑‍🎨 API 설치 필요: 1. Apache Commons-fileupload 2. commons-io  
 
 업로드를 하기 위한 Bean 설정
-  1. servlet-context.xml
+  ■ servlet-context.xml
    ```
  <beans:bean id="multipartReslover" class="CommonsMultipartResolver의 경로">
    <bean:property name="maxuploadSize" value="52428800"/> : 업로드 가능한 최대 파일 크기
-   <bean:prpoerty name="maxInMemoerySize" value="1000000*/> : 업로드 전 메모리 보관가능한 최대 바이트 크기
+   <bean:prpoerty name="maxInMemoerySize" value="1000000*/> : 업로드 전 메모리 보관가능한 최대 바이트 크기     
    </bean:bean>
    ```
+  ■ .jsp 파일의 <form>에서 파일업로드 할때 설정 <br>
+`<form class = "" action="<c:url value='/upload.do(넘어갈 화면)" enctype="multipart/form-data" method="post">`
+   
+  ■ '추가'누를때마다 동적으로 파일이 추가로 업로드 되는 모습 확인 <br>
+    ```
+   var cnt=1;
+ .append("<br>"+<input type='file' name='file"+cnt+"'/>");
+   cnt++;
+    ```
