@@ -145,3 +145,16 @@ Javascript를 통해서 데이터를 불러와 화면단에 뿌려줄 수 있다
   
 ### $.ajax() -> callback 함수로 응답 -> JSON로 Controller에서 응답필요 ###
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/100359222/163884105-55897779-2fa8-4f79-95aa-5665191d66c1.png">
+
+## 2022-04-20 ##
+### Spring WEB MVC 다중 파일 업로드 구현하기(UI) ###
+🧑‍🎨 API 설치 필요: 1. Apache Commons-fileupload 2. commons-io  
+
+업로드를 하기 위한 Bean 설정
+  1. servlet-context.xml
+   ```
+ <beans:bean id="multipartReslover" class="CommonsMultipartResolver의 경로">
+   <bean:property name="maxuploadSize" value="52428800"/> : 업로드 가능한 최대 파일 크기
+   <bean:prpoerty name="maxInMemoerySize" value="1000000*/> : 업로드 전 메모리 보관가능한 최대 바이트 크기
+   </bean:bean>
+   ```
