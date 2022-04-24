@@ -177,3 +177,11 @@ enctype = multipart/form-data  == 여기서 multi의 의미는 서버로 넘어�
  - Spring에서 제공해주는 파일업로드 API가 존재 <BR>
  `MultipartHttpServletRequest multipartRequest` <br>
  🍎 `HttpServletRequest`는 name, id와 같은 파라미터만 받을 수 있다!
+
+ - 업로드쪽으로 파라미터 정보가 넘어와서, multipartReuqest에 담긴다. 
+   - 그때 사용할 수 있는 file 함수(기능)이 있다. 
+    - `multipartRequest.getParameterNames()` // 예를 들어, id, name이라는 파라미터가 넘어온다.
+     - 단, getParameterNames는 `Enumeration`라는 클래스로 받아주어야 한다.
+       - `Enumeration` : 나열, 열거형 <-> **배열(X)** <BR>
+           좋은점: 나열된 데이터가 몇개인지 알 필요가 없기때문에, (size,length) 커서를 옮겨다니면서 '**데이터의 유무**'만 판별해서 데이터를 처리한다.
+         - `Enumeration`의 `hasMoreElements`: 엘리먼트를 가지고 있니? 가지고 있으면 ture, 없으면 false를 리턴한다.
