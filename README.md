@@ -167,3 +167,8 @@ Javascript를 통해서 데이터를 불러와 화면단에 뿌려줄 수 있다
  .append("<br>"+<input type='file' name='file"+cnt+"'/>");
    cnt++;
     ```
+
+ ## 2022-04-25 ##
+### Spring WEB MVC 다중 파일 업로드 구현하기1(서버) ###
+file은 바이너리 데이터로 저장되어 서버에 넘어간다. <br>
+enctype = multipart/form-data  == 여기서 multi의 의미는 서버로 넘어갈때 body에 구분이 되어서 한쪽은 파일정보 한쪽은 파라미터정보로 나누어서, form으로 쌓아서 넘어간다는 식으로 이해하면 된다. 
