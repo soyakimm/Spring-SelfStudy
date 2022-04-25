@@ -191,3 +191,8 @@ enctype = multipart/form-data  == 여기서 multi의 의미는 서버로 넘어�
    - `getOriginalFilename()` : 실제 업로드 된 파일 이름 뽑는 메소드
    
 ![image](https://user-images.githubusercontent.com/100359222/165184812-437f1e49-9d72-4baf-8071-22b6841c7306.png)
+
+ ## 2022-04-26 ##
+### Spring WEB MVC 다중 파일 업로드 구현하기2(서버) ###
+   ⚠️ pom.xml에서 servlet version을 3.1.0으로 업그레이드 해주어야 한다. <br>
+          왜? `getServletContext()` 메소드를 사용하기 위하여
